@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Heittorandomisaattori 2k21</h1>
+		</header>
+		<div>
+			<p id="info">By Juhana & Mikko</p>
+			<p id="info">Alle 15m heitoissa voi putata vapaavalintaisella kiekolla.</p>
+		</div>
+		<div class="text-area">
+			<p id="extra"></p>
+			<p id="kiekko"></p>
+			<p id="heitto"></p>
+		</div>
+		<div class="button-container">
+			<button id="b1" onclick="func1()">Heitto</button>
+			<button id="b2" onclick="func2()">Lähäri</button>
+		</div>
+
+	</body>
+	<script>
+		let kiekot = ["Putteri", "Midari", "Kaverin valinta", "Vapaa valinta!", "Draiveri"]
+		let lahikiekot = ["Putteri", "Midari", "Kaverin valinta", "Vapaa valinta!"]
+		let heitot = ["Suoraan / Antsa", "Hysse", "Forehandi", "VAPAA VALINTA"]
+		let extrakiekot = ["Midari", "Kaverin valinta", "Vapaa valinta!", "Draiveri"]
+		let extrat = ["Upsi", "Kranaatti", "Thumberi", "Rolleri"]
+		function func1() {
+			var e  = document.getElementById("extra")
+			e.innerText = "";
+			var k = kiekot[Math.floor(Math.random() * kiekot.length)] 
+			var h = heitot[Math.floor(Math.random() * heitot.length)] 
+			if (Math.random() < 0.2) {
+				h = extrat[Math.floor(Math.random() * extrat.length)]
+				k = extrakiekot[Math.floor(Math.random() * extrakiekot.length)]
+				e.innerText = "paska heitto incoming :--D";
+			}
+			var kp = document.getElementById("kiekko")
+			var hp = document.getElementById("heitto")
+			kp.innerText = "Kiekko: " + k;
+			hp.innerText = "Heitto: " + h;
+		}
+
+		function func2() {
+			var e  = document.getElementById("extra")
+			e.innerText = "";
+			var k = lahikiekot[Math.floor(Math.random() * lahikiekot.length)] 
+			var h = heitot[Math.floor(Math.random() * heitot.length)] 
+			if (Math.random() <= 0.1) {
+				h = extrat[Math.floor(Math.random() * extrat.length)] 
+				e.innerText = "paska heitto incoming :--D";
+			}
+			var kp = document.getElementById("kiekko")
+			var hp = document.getElementById("heitto")
+			kp.innerText = "Kiekko: " + k;
+			hp.innerText = "Heitto: " + h;
+		}
+	</script>
+#All commercial rights reserved#
+</html>

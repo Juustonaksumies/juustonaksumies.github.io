@@ -1,0 +1,47 @@
+body {
+	display: grid;
+    grid-template-rows: 10% 20% 30% 40%;
+    height: 100vh;
+}
+
+.button-container {
+	grid-column: span 3;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.text-area {
+	grid-column: span 3;
+}
+
+p {
+	text-align: center;
+	font-size: 4vh;
+}
+
+header {
+	grid-column: span 3;
+	padding: 30px;
+	text-align: center;
+	font-size: 1.5vh;
+	background-color: #369;
+	color: white;
+}
+
+button {
+	background: #ededed;
+	font-size: 3vh;
+	padding: 50px;
+	border-radius: 4px;
+}
+
+button:active {
+	background: #e5e5e5;
+	-webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+	-moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+		box-shadow: inset 0px 0px 5px #c1c1c1;
+	outline: none;
+	
+}
